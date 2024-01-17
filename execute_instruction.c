@@ -2,11 +2,17 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+/**
+ * execute_instruction - f
+ * @line: line
+ * @line_number
+ */
 
-extern stack_t *stack;
+stack_t *stack = NULL;
 void execute_instruction(char *line, unsigned int line_number)
 {
 	char *opcode, *arg;
+
 	opcode = strtok(line, " \t\n");
 
 	if (opcode == NULL || opcode[0] == '#')

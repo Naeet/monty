@@ -1,6 +1,11 @@
 #include "monty.h"
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * is_numeric - fun
+ * @str: stri
+ * Return: num
+ */
 
 int is_numeric(const char *str)
 {

@@ -1,6 +1,11 @@
 #include "monty.h"
 #include <stdlib.h>
 #include <stdio.h>
+/**
+ * push - fun
+ * @stack: in
+ * @value: in
+ */
 
 void push(stack_t **stack, int value)
 {

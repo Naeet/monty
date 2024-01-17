@@ -4,16 +4,16 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAX_LINE_LENGTH 1024
-
-stack_t *stack = NULL;
+/**
+ * main - entry
+ * @argc: args
+ * @argv: vec
+ * Return: num
+ */
 
 int main(int argc, char *argv[])
 {
 	FILE *file;
-	/*
-	char *line;
-	size_t len;
-	*/
 	unsigned int line_number;
 	char line[MAX_LINE_LENGTH];
 
@@ -30,10 +30,6 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-/*
-	line = NULL;
-	len = 0;
-	*/
 	line_number = 0;
 
 	while (fgets(line, sizeof(line), file) != NULL)
@@ -44,10 +40,6 @@ int main(int argc, char *argv[])
 
 	}
 	fclose(file);
-/*
-	if (line)
-		free(line);
-*/
 
 	return (0);
 }
