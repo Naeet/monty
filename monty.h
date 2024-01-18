@@ -41,4 +41,5 @@ void pall(stack_t **stack, unsigned int line_number);
 int is_numeric(const char *str);
 void free_stack(stack_t *stack);
 void execute_instruction(char *line, unsigned int line_number, stack_t **stack);
+void pint(stack_t **stack, unsigned int line_number);
 #endif

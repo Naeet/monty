@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	while (fgets(line, sizeof(line), file) != NULL)
 	{
 		line_number++;
-
+		line[strcspn(line, "\n")] = '\0';
 		execute_instruction(line, line_number, &stack);
 
 	}
