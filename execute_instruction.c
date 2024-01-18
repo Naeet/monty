@@ -5,11 +5,11 @@
 /**
  * execute_instruction - f
  * @line: line
- * @line_number
+ * @line_number: num
+ * @stack: stack
  */
 
-stack_t *stack = NULL;
-void execute_instruction(char *line, unsigned int line_number)
+void execute_instruction(char *line, unsigned int line_number, stack_t **stack)
 {
 	char *opcode, *arg;
 
@@ -27,11 +27,11 @@ void execute_instruction(char *line, unsigned int line_number)
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			exit(EXIT_FAILURE);
 		}
-		push(&stack, atoi(arg));
+		push(stack, atoi(arg));
 	}
 	else if (strcmp(opcode, "pall") == 0)
 	{
-		pall(&stack, line_number);
+		pall(stack, line_number);
 	}
 	else
 	{

@@ -21,7 +21,6 @@ typedef struct stack_s
 	struct stack_s *prev;
 	struct stack_s *next;
 } stack_t;
-
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -41,6 +40,5 @@ void push(stack_t **stack, int value);
 void pall(stack_t **stack, unsigned int line_number);
 int is_numeric(const char *str);
 void free_stack(stack_t *stack);
-void execute_instruction(char *line, unsigned int line_number);
-
+void execute_instruction(char *line, unsigned int line_number, stack_t **stack);
 #endif
